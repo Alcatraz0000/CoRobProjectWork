@@ -36,7 +36,7 @@ def main():
         if message == 'exit': 
             break
         try:
-            bot_answer = dialogue_service(message)
+            bot_answer = dialogue_service(message.data)
             terminal.set_text(bot_answer.answer)
         except rospy.ServiceException as e:
             print("Service call failed: %s"%e)

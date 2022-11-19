@@ -1,0 +1,1 @@
+/home/camilla/Scrivania/FinalProjectCogRob/cogrob_ws/CoRobProjectWork/devel/./cmake.lock 2
