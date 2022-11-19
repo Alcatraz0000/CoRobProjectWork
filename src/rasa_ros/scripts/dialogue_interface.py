@@ -3,6 +3,9 @@
 import rospy
 from rasa_ros.srv import Dialogue, DialogueResponse
 from std_msgs.msg import String
+from gtts import gTTS
+import subprocess
+import os
 
 class TerminalInterface:
     '''Class implementing a terminal i/o interface. 
@@ -17,6 +20,11 @@ class TerminalInterface:
         return input("[IN]:  ") 
 
     def set_text(self,text):
+        myVoice = gTTS(text=text,lang="en")
+        myVoice.save("tmp.mp3")
+        subprocess.call(['mpg321','tmp.mp3','--play-and-exit'])
+        #os.remove("./tmp.mp3")
+
         print("[OUT]:",text)
 
 
