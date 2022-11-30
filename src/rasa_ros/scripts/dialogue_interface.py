@@ -3,7 +3,6 @@
 import rospy
 from rasa_ros.srv import Dialogue, DialogueResponse
 from std_msgs.msg import String
-from gtts import gTTS
 import subprocess
 import os
 
